@@ -35,9 +35,12 @@ send a POST request to `/api/subscribe` the api accepts these inputs
     MAIL_PASSWORD=
 you will find these in your mailtrap account
 
-##### Run this cron your local machine
+##### Send automatically via a cron job
 
     * * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1
    
 this will create a cron job that runs every minute to fire any job stored in the queue
+
+##### Send manually via artisan command
+simply run `php artisan sbuscribers:send` this will fire the queue jobs
 
